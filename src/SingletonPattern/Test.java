@@ -13,10 +13,12 @@ public class Test {
         System.out.println("Is Boiled: "+chocolateBoiler.isBoiled());
         ChocolateBoiler chocolateBoiler1 = ChocolateBoiler.getInstance();
         chocolateBoiler1.boil();
+        System.out.println("");
         System.out.println("Is empty: "+chocolateBoiler.isEmpty());
         System.out.println("Is Boiled: "+chocolateBoiler.isBoiled());
         ChocolateBoiler chocolateBoiler2 = ChocolateBoiler.getInstance();
         chocolateBoiler2.drain();
+        System.out.println("");
         System.out.println("Is empty: "+chocolateBoiler.isEmpty());
         System.out.println("Is Boiled: "+chocolateBoiler.isBoiled());
 

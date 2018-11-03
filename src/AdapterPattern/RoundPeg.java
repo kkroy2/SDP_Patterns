@@ -10,6 +10,6 @@ public class RoundPeg {
         this.radius = radius;
     }
     public double getRadius() {
-        return radius;
+        return this.radius;
     }
 }

@@ -17,7 +17,10 @@ public class ChocolateBoiler {
         {
             synchronized (ChocolateBoiler.class)
             {
-                chocolateBoiler = new ChocolateBoiler();
+                if(chocolateBoiler==null)
+                {
+                    chocolateBoiler = new ChocolateBoiler();
+                }
             }
         }
         return chocolateBoiler;
@@ -29,6 +32,7 @@ public class ChocolateBoiler {
         {
             empty = false;
             boiled = false;
+            System.out.println("");
         }
     }
     public void drain()

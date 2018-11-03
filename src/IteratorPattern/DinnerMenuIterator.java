@@ -21,5 +21,18 @@ public class DinnerMenuIterator implements Iterator {
         return item;
     }
 
+    @Override
+    public void remove(int position)
+    {
+        if(position < items.length)
+        {
+            items[position]=null;
+            for(int i = position+1; i < items.length; i++)
+            {
+                items[i-1] = items[i];
+            }
+        }
+        return;
+    }
 
 }

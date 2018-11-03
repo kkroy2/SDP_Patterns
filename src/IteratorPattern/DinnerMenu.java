@@ -1,6 +1,6 @@
 package IteratorPattern;
 
-public class DinnerMenu {
+public class DinnerMenu implements Menu{
     MenuItem[] dinnerItems;
     static final int maxItems = 10;
     private int currentItems;
@@ -10,6 +10,11 @@ public class DinnerMenu {
         dinnerItems = new MenuItem[maxItems];
         currentItems = 0;
 
+    }
+
+    @Override
+    public Iterator createIterator() {
+        return new DinnerMenuIterator(dinnerItems);
     }
 
     public void addItem(String name, String description, double price)

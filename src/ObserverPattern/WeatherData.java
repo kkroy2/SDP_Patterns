@@ -25,6 +25,7 @@ public class WeatherData implements Subject {
         {
             observers.remove(index);
         }
+        return;
     }
 
     @Override

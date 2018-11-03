@@ -5,9 +5,9 @@ public class MiniDuckSimulator {
         Duck duck = new RedHeadDuck();
         Duck duck1 = new RubberDuck();
         Duck duck2 = new DecoyDuck();
-        duck.perfomFly();
-        duck1.perfomFly();
-        duck2.perfomFly();
+        duck.performFly();
+        duck1.performFly();
+        duck2.performFly();
         duck.performQuack();
         duck1.performQuack();
         duck2.performQuack();
@@ -17,10 +17,10 @@ public class MiniDuckSimulator {
 
         Duck modelDuck = new ModelDuck();
         modelDuck.setFlyBehavior(new FlyWithWings());
-        modelDuck.perfomFly();
+        modelDuck.performFly();
         modelDuck.setQuackBehavior(new Quack());
         modelDuck.performQuack();
         modelDuck.setFlyBehavior(new FlyNoWay());
-        modelDuck.perfomFly();
+        modelDuck.performFly();
     }
 }

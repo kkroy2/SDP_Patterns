@@ -9,4 +9,9 @@ public class HouseBlend extends Beverage {
     public double cost() {
         return 120;
     }
+
+    @Override
+    public void setDescription(String description) {
+        super.setDescription(description);
+    }
 }
