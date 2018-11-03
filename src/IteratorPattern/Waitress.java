@@ -12,16 +12,16 @@ public class Waitress {
     }
     public void printMenu()
     {
-        DinnerMenuIterator dinnerMenuIterator = new DinnerMenuIterator(dinnerMenu.getDinnerItems());
-        BreakfastMenuIterator breakfastMenuIterator = new BreakfastMenuIterator(breakfastMenu.getBreakfastItems());
+        DinnerMenuIterator dinnerMenuIterator = (DinnerMenuIterator)dinnerMenu.createIterator();
+        BreakfastMenuIterator breakfastMenuIterator = (BreakfastMenuIterator)breakfastMenu.createIterator();
         System.out.println("Breakfast Menu items:");
         printMenu(breakfastMenuIterator);
         System.out.println("Dinner Menu items:");
         printMenu(dinnerMenuIterator);
         dinnerMenuIterator.remove(1);
         breakfastMenuIterator.remove(1);
-        dinnerMenuIterator = new DinnerMenuIterator(dinnerMenu.getDinnerItems());
-        breakfastMenuIterator = new BreakfastMenuIterator(breakfastMenu.getBreakfastItems());
+        dinnerMenuIterator = (DinnerMenuIterator)dinnerMenu.createIterator();
+        breakfastMenuIterator = (BreakfastMenuIterator)breakfastMenu.createIterator();
         System.out.println("After Modification:");
         System.out.println("Breakfast Menu items:");
         printMenu(breakfastMenuIterator);
